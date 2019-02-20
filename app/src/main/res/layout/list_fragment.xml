@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import
+                type="android.view.View"
+                name="v"/>
+
+        <variable
+                name="model"
+                type="com.imaginarybank.imaginarybank.ui.list.ListLocationViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/size_20"
+            android:paddingRight="@dimen/size_20"
+            android:background="@color/color_background_blue"
+            android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/search_holder"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/size_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/color_white"
+                android:background="@drawable/rounded_blue_corners_8"
+                app:layout_constraintBottom_toTopOf="@id/list_recycleview"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/search_imageview"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintEnd_toStartOf="@id/search_edittx"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="@dimen/size_5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="@dimen/size_0"/>
+
+            <EditText
+                    android:id="@+id/search_edittx"
+                    android:layout_width="@dimen/size_0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="@dimen/size_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:hint="@string/search"
+                    android:backgroundTint="@color/color_white"
+                    android:gravity="center_vertical"
+                    app:layout_constraintStart_toEndOf="@id/search_imageview"
+                    android:layout_height="wrap_content"/>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.Guideline
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.9"
+                android:id="@+id/horizontal_guideline_90"
+                android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_recycleview"
+                android:layout_marginTop="@dimen/size_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline_90"
+                app:layout_constraintTop_toBottomOf="@id/search_holder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

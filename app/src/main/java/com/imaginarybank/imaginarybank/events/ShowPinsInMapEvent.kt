@@ -1,0 +1,3 @@
+package com.imaginarybank.imaginarybank.events
+
+class ShowPinsInMapEvent

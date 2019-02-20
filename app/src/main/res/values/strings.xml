@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImaginaryBank</string>
+    <string name="mobile_assignment">Mobile Assignment</string>
+    <string name="my_location">My Location</string>
+    <string name="location">Location</string>
+    <string name="list">List</string>
+    <string name="search">Search</string>
+    <string name="web_site">Web Site</string>
+    <string name="meeting_request">Meeting Request</string>
+    <string name="address">Address</string>
+    <string name="work_hours">Work Hours</string>
+</resources>
